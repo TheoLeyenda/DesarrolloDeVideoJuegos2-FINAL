@@ -192,5 +192,11 @@ public class Player : MonoBehaviour {
     {
         life = life + 1;
     }
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "AGUA")
+        {
+            Death();
+        }
+    }
 }

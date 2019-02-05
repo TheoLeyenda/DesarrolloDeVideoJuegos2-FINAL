@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NO PASABLE
   - OBSTACULO
+  - AGUA
   layers:
   - Default
   - TransparentFX
