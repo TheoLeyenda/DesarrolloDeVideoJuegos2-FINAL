@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - NO PASABLE
+  - OBSTACULO
   layers:
   - Default
   - TransparentFX
