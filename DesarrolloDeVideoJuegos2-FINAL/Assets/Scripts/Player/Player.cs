@@ -7,6 +7,8 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     public Camera mainCamera;
     public float speed;
+    
+    private Animator animatorFrodo;
     private float x;
     private float y;
     private float life = 3;
@@ -29,6 +31,7 @@ public class Player : MonoBehaviour {
         x = transform.position.x;
         y = transform.position.y;
         transform.rotation = new Quaternion(0, 0, 0, 0);
+        animatorFrodo = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -98,6 +101,10 @@ public class Player : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                animatorFrodo.SetBool("Adelante", true);
+                animatorFrodo.SetBool("Atras", false);
+                animatorFrodo.SetBool("Izquierda", false);
+                animatorFrodo.SetBool("Derecha", false);
                 y = y + speed;
                 transform.position = new Vector3(transform.position.x, y, transform.position.z);
             }
@@ -106,6 +113,11 @@ public class Player : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
+                
+                animatorFrodo.SetBool("Adelante", false);
+                animatorFrodo.SetBool("Atras", true);
+                animatorFrodo.SetBool("Izquierda", false);
+                animatorFrodo.SetBool("Derecha", false);
                 y = y - speed;
                 transform.position = new Vector3(transform.position.x, y, transform.position.z);
 
@@ -115,6 +127,11 @@ public class Player : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
+                
+                animatorFrodo.SetBool("Adelante", false);
+                animatorFrodo.SetBool("Atras", false);
+                animatorFrodo.SetBool("Izquierda", true);
+                animatorFrodo.SetBool("Derecha", false);
                 x = x - speed;
                 transform.position = new Vector3(x, transform.position.y, transform.position.z);
             }
@@ -123,6 +140,11 @@ public class Player : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
+                
+                animatorFrodo.SetBool("Adelante", false);
+                animatorFrodo.SetBool("Atras", false);
+                animatorFrodo.SetBool("Izquierda", false);
+                animatorFrodo.SetBool("Derecha", true);
                 x = x + speed;
                 transform.position = new Vector3(x, transform.position.y, transform.position.z);
             }
