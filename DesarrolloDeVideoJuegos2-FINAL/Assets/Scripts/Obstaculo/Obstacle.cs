@@ -23,39 +23,12 @@ public class Obstacle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Movement();
-        Raycast();
 	}
-    public void Raycast()
-    {
-        if (moveLeft)
-        {
-            hitPlayer = Physics2D.Raycast(transform.position, Vector2.left, distanceRaycast);
-            if (hitPlayer.collider != null)
-            {
-                if (hitPlayer.collider.tag == "Player")
-                {
-                    Debug.Log("ENTRE");
-                    Player.InstancePlayer.Death();
-                }
-            }
-        }
-        if(moveRight)
-        {
-            hitPlayer = Physics2D.Raycast(transform.position, Vector2.right, distanceRaycast);
-            if (hitPlayer.collider != null)
-            {
-                if (hitPlayer.collider.tag == "Player")
-                {
-                    Player.InstancePlayer.Death();
-                }
-            }
-        }
-    }
     public void Movement()
     {
         if(moveRight)
         {
-            transform.position = transform.position - transform.up * Time.deltaTime * speed;
+            transform.position = transform.position + transform.up * Time.deltaTime * speed;
         }
         if(moveLeft)
         {
@@ -74,7 +47,6 @@ public class Obstacle : MonoBehaviour {
     {
         if(collision.tag == "Player")
         {
-            Debug.Log(Player.InstancePlayer.GetLife());
             Player.InstancePlayer.Death();
         }
     }

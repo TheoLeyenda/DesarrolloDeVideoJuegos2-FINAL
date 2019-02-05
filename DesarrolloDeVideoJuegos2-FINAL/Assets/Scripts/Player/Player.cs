@@ -8,8 +8,9 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     public Camera mainCamera;
     public float speed;
-    private Vector3 StartPosition;
     public static Player InstancePlayer;
+
+    private Vector3 StartPosition;
     private Animator animatorFrodo;
     private float x;
     private float y;
@@ -24,6 +25,16 @@ public class Player : MonoBehaviour {
     private RaycastHit2D hitLeft;
     private float relativeOrigin = 0.1f;
     private float subtractH = 0.05f;
+    [SerializeField]
+    private float distaceRaycast;
+    [SerializeField]
+    private Transform originForward;
+    [SerializeField]
+    private Transform originBack;
+    [SerializeField]
+    private Transform originLeft;
+    [SerializeField]
+    private Transform originRight;
 
     void Start() {
         InstancePlayer = this;
@@ -46,7 +57,7 @@ public class Player : MonoBehaviour {
     public void Raycasting()
     {
 
-        hitForward = Physics2D.Raycast(new Vector3(transform.position.x, transform.position.y + relativeOrigin, transform.position.z), Vector2.up, speed / 2);
+        hitForward = Physics2D.Raycast(originForward.position, Vector2.up, distaceRaycast);
         if (hitForward.collider != null)
         {
             if (hitForward.collider.tag == "NO PASABLE")
@@ -59,7 +70,7 @@ public class Player : MonoBehaviour {
             moveForward = true;
         }
 
-        hitBack = Physics2D.Raycast(new Vector3(transform.position.x, transform.position.y - relativeOrigin, transform.position.z), Vector2.down, speed / 2);
+        hitBack = Physics2D.Raycast(originBack.position, Vector2.down, distaceRaycast);
         if (hitBack.collider != null)
         {
             if (hitBack.collider.tag == "NO PASABLE")
@@ -72,7 +83,7 @@ public class Player : MonoBehaviour {
             moveBack = true;
         }
 
-        hitLeft = Physics2D.Raycast(new Vector3(transform.position.x - relativeOrigin, transform.position.y - subtractH, transform.position.z), Vector2.left, speed / 2);
+        hitLeft = Physics2D.Raycast(originLeft.position, Vector2.left, distaceRaycast);
         if (hitLeft.collider != null)
         {
             if (hitLeft.collider.tag == "NO PASABLE")
@@ -85,7 +96,7 @@ public class Player : MonoBehaviour {
             moveLeft = true;
         }
 
-        hitRight = Physics2D.Raycast(new Vector3(transform.position.x + relativeOrigin, transform.position.y - subtractH, transform.position.z), Vector2.right, speed / 2);
+        hitRight = Physics2D.Raycast(originRight.position, Vector2.right,distaceRaycast);
         if (hitRight.collider != null)
         {
             if (hitRight.collider.tag == "NO PASABLE")
