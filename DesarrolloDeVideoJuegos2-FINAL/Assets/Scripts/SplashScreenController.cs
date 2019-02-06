@@ -18,6 +18,13 @@ public class SplashScreenController : MonoBehaviour
     private bool restar;
     private float tiempo;
     private float diley;
+    private float finalDileyLogoEmpresa = 2f;
+    private float inicioTransparenciaLogoEmpresa = 1f;
+    private float finalTransparenciaLogoEmpresa = 0;
+    private float finalTiempo1 = 2;
+    private float finalTiempo2 = 5;
+    private float finalTiempo3 = 3.5f;
+    private float finalTiempo4 = 5f;
     void Start()
     {
         TransparenciaLogoEmpresa = 0;
@@ -42,7 +49,7 @@ public class SplashScreenController : MonoBehaviour
     {
 
         diley = diley + Time.deltaTime;
-        if (diley >= 2 && soloUnaVez)
+        if (diley >= finalDileyLogoEmpresa && soloUnaVez)
         {
             entrarLogoEmpresa = true;
             soloUnaVez = false;
@@ -56,25 +63,25 @@ public class SplashScreenController : MonoBehaviour
                 logoEmpresa.GetComponent<MeshRenderer>().material.color = new Color(logoEmpresa.GetComponent<MeshRenderer>().material.color.r, logoEmpresa.GetComponent<MeshRenderer>().material.color.g, logoEmpresa.GetComponent<MeshRenderer>().material.color.b, TransparenciaLogoEmpresa);
             }
             tiempo = tiempo + Time.deltaTime;
-            if (TransparenciaLogoEmpresa < 1 && sumar)
+            if (TransparenciaLogoEmpresa < inicioTransparenciaLogoEmpresa && sumar)
             {
                 TransparenciaLogoEmpresa = TransparenciaLogoEmpresa + Time.deltaTime;
             }
-            if (tiempo >= 2 && tiempo < 5f)
+            if (tiempo >= finalTiempo1 && tiempo < finalTiempo2)
             {
                 sumar = false;
                 restar = true;
             }
-            if (TransparenciaLogoEmpresa >= 0 && restar)
+            if (TransparenciaLogoEmpresa >= finalTransparenciaLogoEmpresa && restar)
             {
                 TransparenciaLogoEmpresa = TransparenciaLogoEmpresa - Time.deltaTime;
             }
-            if (tiempo >= 3.5f)
+            if (tiempo >= finalTiempo3)
             {
                 //Destroy(logoEmpresa);
                 logoEmpresa.SetActive(false);
             }
-            if (tiempo >= 5f)
+            if (tiempo >= finalTiempo4)
             {
                 entrarLogoEmpresa = false;
                 entrarLogoJuego = true;
@@ -91,29 +98,27 @@ public class SplashScreenController : MonoBehaviour
                 logoJuego.GetComponent<MeshRenderer>().material.color = new Color(logoJuego.GetComponent<MeshRenderer>().material.color.r, logoJuego.GetComponent<MeshRenderer>().material.color.g, logoJuego.GetComponent<MeshRenderer>().material.color.b, TransparenciaLogoJuego);
             }
             tiempo = tiempo + Time.deltaTime;
-            if (TransparenciaLogoJuego < 1 && sumar)
+            if (TransparenciaLogoJuego < inicioTransparenciaLogoEmpresa && sumar)
             {
                 TransparenciaLogoJuego = TransparenciaLogoJuego + Time.deltaTime;
             }
-            if (tiempo >= 2 && tiempo < 5f)
+            if (tiempo >= finalTiempo1 && tiempo < finalTiempo2)
             {
                 sumar = false;
                 restar = true;
             }
-            if(TransparenciaLogoJuego >= 0 && restar)
+            if(TransparenciaLogoJuego >= finalTransparenciaLogoEmpresa && restar)
             {
                 TransparenciaLogoJuego = TransparenciaLogoJuego - Time.deltaTime;
             }
 
-            if (tiempo >= 3.5f)
-            {
-               
+            if (tiempo >= finalTiempo3)
+            {   
                 entrarLogoEmpresa = false;
                 entrarLogoJuego = false;
                 sumar = true;
                 restar = false;
                 SceneManager.LoadScene("Menu");
-
             }
         }
     }
