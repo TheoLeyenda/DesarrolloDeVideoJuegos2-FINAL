@@ -42,6 +42,7 @@ public class SplashScreenController : MonoBehaviour
         tempMatJuego.color = new Color(tempMatJuego.color.r, tempMatJuego.color.g, tempMatJuego.color.b, TransparenciaLogoJuego);
         logoEmpresa.GetComponent<MeshRenderer>().sharedMaterial.color = tempMatEmpresa.color;
         logoJuego.GetComponent<MeshRenderer>().sharedMaterial.color = tempMatJuego.color;
+        logoJuego.SetActive(false);
     }
 
     // Update is called once per frame
@@ -93,6 +94,7 @@ public class SplashScreenController : MonoBehaviour
 
         if (entrarLogoJuego)
         {
+            logoJuego.SetActive(true);
             if (logoJuego != null)
             {
                 logoJuego.GetComponent<MeshRenderer>().material.color = new Color(logoJuego.GetComponent<MeshRenderer>().material.color.r, logoJuego.GetComponent<MeshRenderer>().material.color.g, logoJuego.GetComponent<MeshRenderer>().material.color.b, TransparenciaLogoJuego);
