@@ -2,13 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
     // Use this for initialization
     public float speed;
     public static Player InstancePlayer;
+    public Text textScore;
+    public GameObject[] lifes;
+    [HideInInspector]
+    public float score;
 
+    private float heigActuality;
+    private float maxHeight;
     private Vector3 StartPosition;
     private Animator animatorFrodo;
     private float x;
@@ -36,6 +43,9 @@ public class Player : MonoBehaviour {
     private Transform originRight;
 
     void Start() {
+        maxHeight = transform.position.y;
+        heigActuality = maxHeight;
+        textScore.text = "Puntaje: "+score;
         InstancePlayer = this;
         StartPosition = transform.position;
         moveForward = true;
@@ -52,6 +62,16 @@ public class Player : MonoBehaviour {
     void Update() {
         Movement();
         Raycasting();
+        CheckScore();
+    }
+    public void CheckScore()
+    {
+        if((int)heigActuality > (int)maxHeight)
+        {
+            score = score + 10;
+            maxHeight = heigActuality;
+            textScore.text = "Puntaje: " + score;
+        }
     }
     public void Raycasting()
     {
@@ -113,6 +133,7 @@ public class Player : MonoBehaviour {
     {
         if (moveForward)
         {
+            heigActuality = transform.position.y;
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 animatorFrodo.SetBool("Adelante", true);
@@ -166,7 +187,18 @@ public class Player : MonoBehaviour {
     }
     public void SetLife(int _life)
     {
-        life = _life;
+        if (life <= 3)
+        {
+            life = _life;
+        }
+        for (int i = 0; i < lifes.Length; i++)
+        {
+            lifes[i].SetActive(false);
+        }
+        for(int i = 0; i<life; i++)
+        {
+            lifes[i].SetActive(true);
+        }
     }
     public void Death()
     {
@@ -186,10 +218,30 @@ public class Player : MonoBehaviour {
     public void SubstractLife()
     {
         life = life - 1;
+        for (int i = 0; i < lifes.Length; i++)
+        {
+            lifes[i].SetActive(false);
+        }
+        for (int i = 0; i < life; i++)
+        {
+            lifes[i].SetActive(true);
+        }
+
     }
     public void AddLife()
     {
-        life = life + 1;
+        if(life < 3)
+        {
+            life = life + 1;
+        }
+        for (int i = 0; i < lifes.Length; i++)
+        {
+            lifes[i].SetActive(false);
+        }
+        for (int i = 0; i < life; i++)
+        {
+            lifes[i].SetActive(true);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
