@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     public bool pause;
     public GameObject camvasMenuPause;
     public GameObject camvasPlayer;
+    public GameObject camvasControls;
     private void Start()
     {
         InstanceGameManager = this;
@@ -66,5 +67,15 @@ public class GameManager : MonoBehaviour {
     public void MainMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+    public void ControlsON()
+    {
+        camvasControls.SetActive(true);
+        camvasMenuPause.SetActive(false);
+    }
+    public void BackPauseMenu()
+    {
+        camvasControls.SetActive(false);
+        camvasMenuPause.SetActive(true);
     }
 }
