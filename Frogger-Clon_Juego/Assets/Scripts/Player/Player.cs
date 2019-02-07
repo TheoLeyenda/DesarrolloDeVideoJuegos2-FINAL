@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour {
 
     // Use this for initialization
-    public Camera mainCamera;
     public float speed;
     public static Player InstancePlayer;
 

@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 5884c9c65d0d81148b1ec722023d2204
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1.unity
+    guid: 2601e7deed6c2894b884829a14799b14
+  - enabled: 1
+    path: Assets/Scenes/SplashScreen.unity
+    guid: a30de2a25a4fdcd4395620ef86d502c8
   m_configObjects: {}
