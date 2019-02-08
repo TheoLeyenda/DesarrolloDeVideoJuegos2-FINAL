@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4178725641720408}
   m_Layer: 0
-  m_Name: Tronco
+  m_Name: Tronco Derecha
   m_TagString: TRONCO
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
