@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4578864051390450}
   - component: {fileID: 212534830627374574}
   - component: {fileID: 95953859236663820}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4002422174905834}
   - component: {fileID: 212869704244509224}
   - component: {fileID: 95022106654404746}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4678195577393022}
   - component: {fileID: 212036690001913596}
   - component: {fileID: 95311979934225454}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4414779073355508}
   - component: {fileID: 212308092322553622}
   - component: {fileID: 95161446624604768}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4321995653184084}
   - component: {fileID: 212815507843234606}
   - component: {fileID: 95194028202478442}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4290970095894578}
   - component: {fileID: 212153074529134396}
   - component: {fileID: 95842693743501816}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4003587223024768}
   - component: {fileID: 212552137636926018}
   - component: {fileID: 95423442411564218}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4137671138015906}
   - component: {fileID: 212938383854999644}
   - component: {fileID: 95602696526130460}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 4205346611427476}
   - component: {fileID: 212050149275711168}
   - component: {fileID: 95478704779739736}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 4098298133332286}
   - component: {fileID: 212546224027480356}
   - component: {fileID: 95204619768203816}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4246853971195086}
   - component: {fileID: 61667189272660512}
-  m_Layer: 0
+  - component: {fileID: 212966134485366438}
+  m_Layer: 4
   m_Name: Franja de Agua
   m_TagString: AGUA
   m_Icon: {fileID: 0}
@@ -207,7 +208,7 @@ GameObject:
   - component: {fileID: 4461023941546376}
   - component: {fileID: 212483859018040392}
   - component: {fileID: 95839225652275098}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +225,7 @@ GameObject:
   - component: {fileID: 4935313536493552}
   - component: {fileID: 212580026088149694}
   - component: {fileID: 95096625132623524}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +242,7 @@ GameObject:
   - component: {fileID: 4232428587361056}
   - component: {fileID: 212685413602212292}
   - component: {fileID: 95098141209009758}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +259,7 @@ GameObject:
   - component: {fileID: 4967960040209806}
   - component: {fileID: 212107274237948210}
   - component: {fileID: 95229448081638628}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +276,7 @@ GameObject:
   - component: {fileID: 4949488059033422}
   - component: {fileID: 212099778159825134}
   - component: {fileID: 95894660847238570}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Agua (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +368,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1797132850121254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.9, y: 18.58, z: 0.09096539}
+  m_LocalPosition: {x: -28.7, y: 14.34, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4321995653184084}
@@ -1488,5 +1489,51 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!212 &212966134485366438
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797132850121254}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

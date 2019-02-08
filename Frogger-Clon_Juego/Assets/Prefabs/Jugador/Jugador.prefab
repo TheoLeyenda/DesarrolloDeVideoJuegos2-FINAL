@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4449748566454052}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RayCast_Right
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 224462187329324382}
   - component: {fileID: 222167762796278384}
   - component: {fileID: 114631814915835920}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TextVidas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 224630913403213894}
   - component: {fileID: 222218124421517738}
   - component: {fileID: 114688785332851606}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 50529224077986526}
   - component: {fileID: 114315694209417798}
   - component: {fileID: 95477394938188138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jugador
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4221794833656946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RayCast_Left
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4398053046186644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RayCast_Forward
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 224013357332356470}
   - component: {fileID: 222990460492645722}
   - component: {fileID: 114702072009014448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 4574259793657826}
   - component: {fileID: 114069084345751012}
   - component: {fileID: 114848463687203008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 224768073887048026}
   - component: {fileID: 222887859970700708}
   - component: {fileID: 114047562733192188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 224012001644244492}
   - component: {fileID: 222979181939914578}
   - component: {fileID: 114382936603893784}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TextTiempo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 224514400113679298}
   - component: {fileID: 222874339502751630}
   - component: {fileID: 114021435846491004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TextPuntaje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 222953114102253040}
   - component: {fileID: 114065719345192650}
   - component: {fileID: 114854905160085114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4929858931031448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RayCast_Back
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 224669021598567418}
   - component: {fileID: 222592852749948844}
   - component: {fileID: 114450528298312272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,13 +256,13 @@ GameObject:
   - component: {fileID: 223268762533843918}
   - component: {fileID: 114865085330214364}
   - component: {fileID: 114244708379959200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CanvasPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4221794833656946
 Transform:
   m_ObjectHideFlags: 1
@@ -283,7 +283,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1325193055302154}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015045166, y: -17.799988, z: 0}
+  m_LocalPosition: {x: 0, y: -18, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 4398053046186644}
@@ -378,7 +378,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026589394, y: -0.004320979}
+  m_Offset: {x: 0.026589394, y: -0.009760737}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -389,7 +389,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1359441, y: 1.2443011}
+  m_Size: {x: 1.1359441, y: 0.9993999}
   m_EdgeRadius: 0
 --- !u!95 &95477394938188138
 Animator:
@@ -550,6 +550,8 @@ MonoBehaviour:
   - {fileID: 1510429886150822}
   - {fileID: 1296103253304344}
   score: 0
+  x: 0
+  y: 0
   distaceRaycast: 0.05
   originForward: {fileID: 4398053046186644}
   originBack: {fileID: 4929858931031448}
@@ -827,7 +829,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c67ca621a0104dc4f8e56459d360118c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

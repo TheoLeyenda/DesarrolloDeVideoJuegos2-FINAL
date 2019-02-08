@@ -45,9 +45,23 @@ public class Obstacle : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.tag == "Player" && gameObject.tag != "TRONCO")
         {
             Player.InstancePlayer.Death();
+        }
+    }
+     private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.tag == "Player" && transform.tag == "TRONCO")
+        {
+            if (moveRight)
+            {
+                Player.InstancePlayer.transform.position = Player.InstancePlayer.transform.position + Player.InstancePlayer.transform.right * Time.deltaTime * speed;
+            }
+            else
+            {
+                Player.InstancePlayer.transform.position = Player.InstancePlayer.transform.position - Player.InstancePlayer.transform.right * Time.deltaTime * speed;
+            }
         }
     }
 }

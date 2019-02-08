@@ -13,13 +13,14 @@ public class Player : MonoBehaviour {
     public GameObject[] lifes;
     [HideInInspector]
     public float score;
-
     private float heigActuality;
     private float maxHeight;
     private Vector3 StartPosition;
     private Animator animatorFrodo;
-    private float x;
-    private float y;
+    [HideInInspector]
+    public float x;
+    [HideInInspector]
+    public float y;
     private int life = 3;
     private bool moveForward;
     private bool moveBack;
@@ -41,8 +42,12 @@ public class Player : MonoBehaviour {
     private Transform originLeft;
     [SerializeField]
     private Transform originRight;
+    private float timeInLayer;
+    private float auxTimeInLeayer;
 
     void Start() {
+        timeInLayer = 3;
+        auxTimeInLeayer = timeInLayer;
         maxHeight = transform.position.y;
         heigActuality = maxHeight;
         textScore.text = "Puntaje: "+score;
@@ -63,12 +68,18 @@ public class Player : MonoBehaviour {
         Movement();
         Raycasting();
         CheckScore();
+        //CheckLayer();
         SetDataStructure();
+        x = transform.position.x;
+        y = transform.position.y;
     }
     public void SetDataStructure()
     {
-        DataStructure.auxiliaryDataStructure.playerData.life = life;
-        DataStructure.auxiliaryDataStructure.playerData.score = score;
+        if (DataStructure.auxiliaryDataStructure != null)
+        {
+            DataStructure.auxiliaryDataStructure.playerData.life = life;
+            DataStructure.auxiliaryDataStructure.playerData.score = score;
+        }
     }
     public void CheckScore()
     {
@@ -249,11 +260,41 @@ public class Player : MonoBehaviour {
             lifes[i].SetActive(true);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void CheckLayer()
     {
-        if(collision.tag == "AGUA")
+        if (transform.gameObject.layer == 8)
         {
-            Death();
+            if (timeInLayer > 0)
+            {
+                timeInLayer = timeInLayer - Time.deltaTime;
+            }
+            if (timeInLayer <= 0)
+            {
+                timeInLayer = auxTimeInLeayer;
+                gameObject.layer = 9;
+            }
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        if (collision.tag == "TRONCO")
+        {
+            transform.gameObject.layer = 8;
+            timeInLayer = auxTimeInLeayer;
+            
+        }
+        if (collision.tag == "AGUA" && gameObject.layer == 9)
+        {
+            Debug.Log("FUCK");
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.tag == "TRONCO")
+        {
+            gameObject.layer = 9;
+        }
+    }
+
 }

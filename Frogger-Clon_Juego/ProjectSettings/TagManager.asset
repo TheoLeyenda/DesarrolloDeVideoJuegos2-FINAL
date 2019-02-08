@@ -7,6 +7,7 @@ TagManager:
   - NO PASABLE
   - OBSTACULO
   - AGUA
+  - TRONCO
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - No Colisiona con MUERTE
+  - SI coliciona con MUERTE
   - 
   - 
   - 
