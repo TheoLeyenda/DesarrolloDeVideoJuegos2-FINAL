@@ -25,6 +25,9 @@ public class DataStructure : MonoBehaviour {
     public struct PlayerData
     {
         public int life;
+        public float score;
+        public float Seconds;
+        public float minutes;
     }
     public void SetPlayerData()
     {
@@ -34,12 +37,4 @@ public class DataStructure : MonoBehaviour {
     {
         Player.InstancePlayer.SetLife(playerData.life);
     }
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

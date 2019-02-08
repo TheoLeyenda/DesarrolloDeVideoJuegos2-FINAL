@@ -64,5 +64,7 @@ public class TimeOnPlay : MonoBehaviour {
             time.text = "Tiempo: " + (int)minutes + ":0" + (int)seconds;
         }
         seconds = seconds - Time.deltaTime;
+        DataStructure.auxiliaryDataStructure.playerData.minutes = minutes;
+        DataStructure.auxiliaryDataStructure.playerData.Seconds = seconds;
     }
 }

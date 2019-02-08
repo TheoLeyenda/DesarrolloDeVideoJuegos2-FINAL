@@ -63,6 +63,12 @@ public class Player : MonoBehaviour {
         Movement();
         Raycasting();
         CheckScore();
+        SetDataStructure();
+    }
+    public void SetDataStructure()
+    {
+        DataStructure.auxiliaryDataStructure.playerData.life = life;
+        DataStructure.auxiliaryDataStructure.playerData.score = score;
     }
     public void CheckScore()
     {

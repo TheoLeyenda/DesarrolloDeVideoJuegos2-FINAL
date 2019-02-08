@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SplashScreen.unity
     guid: a30de2a25a4fdcd4395620ef86d502c8
+  - enabled: 1
+    path: Assets/Scenes/Nivel Completado.unity
+    guid: a9cf5af76c2d7ad44a65c2492523ec18
   m_configObjects: {}
