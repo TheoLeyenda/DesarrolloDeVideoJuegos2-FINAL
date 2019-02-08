@@ -286,7 +286,7 @@ public class Player : MonoBehaviour {
         }
         if (collision.tag == "AGUA" && gameObject.layer == 9)
         {
-            Debug.Log("FUCK");
+            Death();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
