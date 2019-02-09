@@ -42,8 +42,8 @@ public class MoveCamera : MonoBehaviour {
     {
         if(collision.tag == "Player")
         {
-            Debug.Log("ENTRE");
             boxCollider.isTrigger = false;
+            gameObject.tag = "NO PASABLE";
         }
     }
 }

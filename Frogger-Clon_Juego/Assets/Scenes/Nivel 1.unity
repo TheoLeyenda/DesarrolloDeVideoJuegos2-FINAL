@@ -749,7 +749,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1707138174884802, guid: b8c2a7d8c6c3908438ff497928122cae, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8c2a7d8c6c3908438ff497928122cae, type: 2}
@@ -847,6 +847,16 @@ Prefab:
     - target: {fileID: 4593580618886304, guid: 934e21c35205706459db509855d1dea2, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61175202879840796, guid: 934e21c35205706459db509855d1dea2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 53.78585
+      objectReference: {fileID: 0}
+    - target: {fileID: 61175202879840796, guid: 934e21c35205706459db509855d1dea2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 198.0206
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 934e21c35205706459db509855d1dea2, type: 2}
@@ -1097,7 +1107,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.088066, y: -1.9248648}
+  m_Offset: {x: 2.088066, y: -3.3000538}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1108,7 +1118,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 75.04785, y: 3.3305912}
+  m_Size: {x: 75.04785, y: 0.5803132}
   m_EdgeRadius: 0
 --- !u!4 &1701122153
 Transform:
@@ -1186,6 +1196,16 @@ Prefab:
     - target: {fileID: 4487626681316628, guid: 7c8b2b2a0f889c442899daf9b1221b84, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61060012455600986, guid: 7c8b2b2a0f889c442899daf9b1221b84,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 53.78585
+      objectReference: {fileID: 0}
+    - target: {fileID: 61060012455600986, guid: 7c8b2b2a0f889c442899daf9b1221b84,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 198.02058
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8b2b2a0f889c442899daf9b1221b84, type: 2}
