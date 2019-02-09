@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
         InstanceGameManager = this;
         pause = false;
         camvasMenuPause.SetActive(false);
-        //CursorOff();
+        SetPlayerData();
     }
 
     // Update is called once per frame
@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour {
     {
         CheckCursor();
         CheckPause();
+    }
+    public void SetPlayerData()
+    {
+        Player.InstancePlayer.score = DataStructure.auxiliaryDataStructure.playerData.score;
+        Player.InstancePlayer.life = DataStructure.auxiliaryDataStructure.playerData.life;
     }
     public void CheckCursor()
     {

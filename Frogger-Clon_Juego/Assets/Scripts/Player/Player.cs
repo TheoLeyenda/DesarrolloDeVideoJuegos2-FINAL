@@ -27,7 +27,8 @@ public class Player : MonoBehaviour {
     public float x;
     [HideInInspector]
     public float y;
-    private int life = 3;
+    [HideInInspector]
+    public int life = 3;
     private bool moveForward;
     private bool moveBack;
     private bool moveRight;
@@ -68,6 +69,7 @@ public class Player : MonoBehaviour {
         transform.rotation = new Quaternion(0, 0, 0, 0);
         animatorFrodo = GetComponent<Animator>();
         StartPosition = transform.position;
+        DataStructure.auxiliaryDataStructure.playerData.life = life;
     }
 
     // Update is called once per frame
