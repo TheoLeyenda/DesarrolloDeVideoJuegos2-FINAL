@@ -65,7 +65,7 @@ public class TimeOnPlay : MonoBehaviour {
         }
         seconds = seconds - Time.deltaTime;
         if (DataStructure.auxiliaryDataStructure != null)
-        {
+        { 
             DataStructure.auxiliaryDataStructure.playerData.minutes = minutes;
             DataStructure.auxiliaryDataStructure.playerData.Seconds = seconds;
         }

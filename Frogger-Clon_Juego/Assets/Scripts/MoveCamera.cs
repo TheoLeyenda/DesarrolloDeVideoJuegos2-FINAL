@@ -7,12 +7,16 @@ public class MoveCamera : MonoBehaviour {
     // Use this for initialization
     public float speedMovementCamera;
     public GameObject cam;
-    private BoxCollider2D boxCollider;
+    [HideInInspector]
+    public BoxCollider2D boxCollider;
     public GameObject FinishPoint;
-    private bool activateMovementCamera;
-
+    [HideInInspector]
+    public bool activateMovementCamera;
+    [HideInInspector]
+    public Vector3 startPosition;
     void Start ()
     {
+        startPosition = cam.transform.position;
         activateMovementCamera = false;
         boxCollider = GetComponent<BoxCollider2D>();
 	}
@@ -44,6 +48,7 @@ public class MoveCamera : MonoBehaviour {
         {
             boxCollider.isTrigger = false;
             gameObject.tag = "NO PASABLE";
+            Player.InstancePlayer.PosRespawn = new Vector3(0, Player.InstancePlayer.transform.position.y, Player.InstancePlayer.transform.position.z);
         }
     }
 }

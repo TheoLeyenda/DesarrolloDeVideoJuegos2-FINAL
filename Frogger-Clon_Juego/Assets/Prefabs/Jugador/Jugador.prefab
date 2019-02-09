@@ -543,6 +543,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c019438fb0fb6b459fee3ff99aef3cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  metas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speed: 3
   textScore: {fileID: 114021435846491004}
   lifes:
@@ -550,6 +555,10 @@ MonoBehaviour:
   - {fileID: 1510429886150822}
   - {fileID: 1296103253304344}
   score: 0
+  heigActuality: 0
+  maxHeight: 0
+  PosRespawn: {x: 0, y: 0, z: 0}
+  StartPosition: {x: 0, y: 0, z: 0}
   x: 0
   y: 0
   distaceRaycast: 0.05

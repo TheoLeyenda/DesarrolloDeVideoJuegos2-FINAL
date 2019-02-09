@@ -12,11 +12,11 @@ public class ShowData : MonoBehaviour {
         puntaje.text = "Puntaje: " + DataStructure.auxiliaryDataStructure.playerData.score;
         if (DataStructure.auxiliaryDataStructure.playerData.Seconds >= 10)
         {
-            time.text = "Tiempo: " + DataStructure.auxiliaryDataStructure.playerData.minutes + ":" + DataStructure.auxiliaryDataStructure.playerData.Seconds;
+            time.text = "Tiempo: " + DataStructure.auxiliaryDataStructure.playerData.minutes + ":" + (int)DataStructure.auxiliaryDataStructure.playerData.Seconds;
         }
         else
         {
-            time.text = "Tiempo: " + DataStructure.auxiliaryDataStructure.playerData.minutes + ":0" + DataStructure.auxiliaryDataStructure.playerData.Seconds;
+            time.text = "Tiempo: " + DataStructure.auxiliaryDataStructure.playerData.minutes + ":0" + (int)DataStructure.auxiliaryDataStructure.playerData.Seconds;
         }
 
     }

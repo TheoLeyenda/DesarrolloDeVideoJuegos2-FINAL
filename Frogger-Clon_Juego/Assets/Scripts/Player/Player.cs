@@ -7,15 +7,21 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour {
 
     // Use this for initialization
+    public Meta[] metas;
     public float speed;
     public static Player InstancePlayer;
     public Text textScore;
     public GameObject[] lifes;
     [HideInInspector]
     public float score;
-    private float heigActuality;
-    private float maxHeight;
-    private Vector3 StartPosition;
+    [HideInInspector]
+    public float heigActuality;
+    [HideInInspector]
+    public float maxHeight;
+    [HideInInspector]
+    public Vector3 PosRespawn;
+    [HideInInspector]
+    public Vector3 StartPosition;
     private Animator animatorFrodo;
     [HideInInspector]
     public float x;
@@ -52,7 +58,7 @@ public class Player : MonoBehaviour {
         heigActuality = maxHeight;
         textScore.text = "Puntaje: "+score;
         InstancePlayer = this;
-        StartPosition = transform.position;
+        PosRespawn = transform.position;
         moveForward = true;
         moveBack = true;
         moveRight = true;
@@ -61,6 +67,7 @@ public class Player : MonoBehaviour {
         y = transform.position.y;
         transform.rotation = new Quaternion(0, 0, 0, 0);
         animatorFrodo = GetComponent<Animator>();
+        StartPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -68,10 +75,25 @@ public class Player : MonoBehaviour {
         Movement();
         Raycasting();
         CheckScore();
-        //CheckLayer();
+        CheckMetas();
         SetDataStructure();
         x = transform.position.x;
         y = transform.position.y;
+    }
+    public void CheckMetas()
+    {
+        int Dones = 0;
+        for(int i = 0; i< metas.Length; i++)
+        {
+            if(metas[i].GG)
+            {
+                Dones++;
+            }
+        }
+        if(Dones == metas.Length)
+        {
+            SceneManager.LoadScene("Nivel Completado");
+        }
     }
     public void SetDataStructure()
     {
@@ -220,7 +242,7 @@ public class Player : MonoBehaviour {
     public void Death()
     {
         SubstractLife();
-        transform.position = StartPosition;
+        transform.position = PosRespawn;
         x = transform.position.x;
         y = transform.position.y;
         if(life < 0)
