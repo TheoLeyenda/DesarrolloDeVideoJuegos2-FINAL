@@ -29,6 +29,8 @@ public class Player : MonoBehaviour {
     public float y;
     [HideInInspector]
     public int life = 3;
+    [HideInInspector]
+    public int maxLife;
     private bool moveForward;
     private bool moveBack;
     private bool moveRight;
@@ -53,6 +55,7 @@ public class Player : MonoBehaviour {
     private float auxTimeInLeayer;
 
     void Start() {
+        maxLife = life;
         timeInLayer = 3;
         auxTimeInLeayer = timeInLayer;
         maxHeight = transform.position.y;
@@ -94,6 +97,10 @@ public class Player : MonoBehaviour {
         }
         if(Dones == metas.Length)
         {
+            if (life < maxLife)
+            {
+                DataStructure.auxiliaryDataStructure.playerData.life++;
+            }
             SceneManager.LoadScene("Nivel Completado");
         }
     }
