@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShowData : MonoBehaviour {
 
@@ -19,5 +20,9 @@ public class ShowData : MonoBehaviour {
             time.text = "Tiempo: " + DataStructure.auxiliaryDataStructure.playerData.minutes + ":0" + (int)DataStructure.auxiliaryDataStructure.playerData.Seconds;
         }
 
+    }
+    public void Siguiente()
+    {
+        SceneManager.LoadScene("Pantalla De Carga");
     }
 }

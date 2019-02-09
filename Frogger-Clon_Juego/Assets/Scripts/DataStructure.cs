@@ -9,6 +9,8 @@ public class DataStructure : MonoBehaviour {
 
     [HideInInspector]
     public PlayerData playerData;
+    [HideInInspector]
+    public NextLevel nextLevel;
 
     private void Awake()
     {
@@ -21,6 +23,14 @@ public class DataStructure : MonoBehaviour {
         {
             this.gameObject.SetActive(false);
         }
+    }
+    private void Start()
+    {
+        nextLevel.level = 0;
+    }
+    public struct NextLevel
+    {
+        public int level;
     }
     public struct PlayerData
     {

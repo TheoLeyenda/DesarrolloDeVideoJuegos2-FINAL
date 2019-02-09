@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour {
     public GameObject credits;
     public void Play()
     {
-        SceneManager.LoadScene("Nivel 1");
+        SceneManager.LoadScene("Pantalla De Carga");
     }
     public void Credits()
     {
