@@ -8,6 +8,7 @@ TagManager:
   - OBSTACULO
   - AGUA
   - TRONCO
+  - PASAJE DE FASE
   layers:
   - Default
   - TransparentFX
